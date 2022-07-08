@@ -1,5 +1,4 @@
-package ClasesToAll;
-
+package SuitForThreeBrowser;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -8,39 +7,16 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.opera.OperaDriver;
-import org.openqa.selenium.opera.OperaOptions;
-import org.openqa.selenium.safari.SafariDriver;
-import org.testng.annotations.*;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
-import java.util.concurrent.TimeUnit;
 
-public class TestInit {
+public abstract class ThreeBrowsers  {
     public WebDriver driver;
     ChromeOptions optionsChrome = new ChromeOptions();
     FirefoxOptions optionsFirefox = new FirefoxOptions();
-
-    // якщо потрібно запустити тести не відкриваючи браузер =true
-    boolean headless = true;
-
-
-    @AfterMethod
-    public void afterMethod() {
-        driver.quit();
-    }
-
-
-    public void openUrl(String site) {
-        driver.get(site);
-    }
-
-    public void sleep(int seconds) {
-        try {
-            Thread.sleep(seconds * 1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
+    boolean headless = false;
     public WebDriver getDriverByName(String browserType) {
         WebDriver driver = null;
         if (browserType.equals("chrome")) {
