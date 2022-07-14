@@ -17,8 +17,8 @@ public class Paint1 {
             }
             System.out.println();
         }
-
+// метод звінює малюнок в залежності від параметрів, якщо передаєш один малює квадрат, два - трикутник
     public static void main(String[] args) {
-        square(4);
+        square(15, 8);
     }
 }
