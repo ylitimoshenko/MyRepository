@@ -3,7 +3,6 @@ package TaskOverrideOverload.OverloadTripConstructor;
 import org.testng.annotations.Test;
 
 public class TestTripToGreece {
-
     @Test
     public void testTripToGreece() {
         TripToGreece tripToGreece = new TripToGreece("Halkidiki", "ten", 4, 1500, true, 7);
@@ -11,7 +10,7 @@ public class TestTripToGreece {
         tripToGreece.showAllInclusive();
         tripToGreece.showNumberPeoleHaveRest();
 
-        TripToGreece tripToGreece2 = new TripToGreece("Athense", "3", 5, 300, true, 3);
+        TripToGreece tripToGreece2 = new TripToGreece("Athense", "3", 5);
         tripToGreece2.showTripDetails();
         tripToGreece2.showAllInclusive();
         tripToGreece2.showNumberPeoleHaveRest();
@@ -22,7 +21,7 @@ public class TestTripToGreece {
         tripToGreece3.showTripDetails();
         tripToGreece3.showAllInclusive();
 
-        TripToGreece tripToGreece4 = new TripToGreece("Malia", "five", 4, 2500, true, 2);
+        TripToGreece tripToGreece4 = new TripToGreece("Malia", "five", 4);
         tripToGreece4.showTripDetails();
         tripToGreece4.showAllInclusive();
 
@@ -36,7 +35,7 @@ public class TestTripToGreece {
         tripToGreece5.showTripYanino();
         tripToGreece5.showDurationAndStarsHotel();
 
-        TripToGreece tripToGreece6 = new TripToGreece("Iraclion", "seven", 5);
+        TripToGreece tripToGreece6 = new TripToGreece("Iraclion", "seven", 5, 4000, true, 3);
         tripToGreece6.showTripYanino();
         tripToGreece6.showDurationAndStarsHotel();
 
