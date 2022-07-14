@@ -2,3 +2,5 @@ target/
 .idea/
 ../.idea/
 MyRepository.iml
+ ../.idea/compiler.xml
+
