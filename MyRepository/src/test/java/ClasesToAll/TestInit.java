@@ -19,7 +19,7 @@ public class TestInit {
     FirefoxOptions optionsFirefox = new FirefoxOptions();
 
     // якщо потрібно запустити тести не відкриваючи браузер =true
-    boolean headless = true;
+    boolean headless = false;
 
 
     @AfterMethod
