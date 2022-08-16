@@ -1,4 +1,5 @@
-package LessonsJavaZaur;
+package JavaLessonZaur;
 
 public class Lesson30 {
+
 }

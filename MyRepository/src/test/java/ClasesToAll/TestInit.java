@@ -72,7 +72,7 @@ public class TestInit {
 
     @Parameters("driver-name")
     @BeforeMethod
-    public void startTest(@Optional("opera") String browserName) throws Exception {
+    public void startTest(@Optional("chrome") String browserName) throws Exception {
         driver = getDriverByName(browserName);
     }
 }

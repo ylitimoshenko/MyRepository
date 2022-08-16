@@ -19,6 +19,6 @@
         <parameter name="driver-name" value="opera"/>
         <classes>
             <class name="PecodeLogin.Tests.PecodeUITests"/>
-        </classes>
+        </classes>][[[]
     </test>
 </suite>
