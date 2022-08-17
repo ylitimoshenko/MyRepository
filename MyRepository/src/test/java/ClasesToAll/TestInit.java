@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.opera.OperaOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
@@ -54,7 +55,8 @@ public class TestInit {
         }
         if (browserType.equals("opera")) {
             WebDriverManager.operadriver().setup();
-            driver = new OperaDriver();
+            OperaOptions operaOptions = new OperaOptions().addArguments("--headless");
+            driver = new OperaDriver(operaOptions);
             driver.manage().window().maximize();
         }
         if (browserType.equals("firefox")) {
